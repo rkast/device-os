@@ -68,6 +68,10 @@ public:
   operator bool();
 
   bool isEnabled(void);
+
+  operator hal_usart_interface_t() const {
+    return _serial;
+  }
 };
 
 #if Wiring_Serial2
